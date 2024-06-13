@@ -1,0 +1,36 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+cod-eni-frontend/node_modules
+cod-eni-frontend/pnp
+cod-eni-frontend/pnp.js
+cod-eni-frontend/yarn/install-state.gz
+
+# testing
+cod-eni-frontend/coverage
+cod-eni-frontend/env
+# next.js
+cod-eni-frontend/.next/
+cod-eni-frontend/out/
+
+# production
+cod-eni-frontend/build
+
+# misc
+cod-eni-frontend/.DS_Store
+cod-eni-frontend/*.pem
+
+# debug
+cod-eni-frontend/npm-debug.log*
+cod-eni-frontend/yarn-debug.log*
+cod-eni-frontend/yarn-error.log*
+
+# local env files
+cod-eni-frontend/.env*.local
+
+# vercel
+cod-eni-frontend/.vercel
+
+# typescript
+cod-eni-frontend/*.tsbuildinfo
+cod-eni-frontend/next-env.d.ts
