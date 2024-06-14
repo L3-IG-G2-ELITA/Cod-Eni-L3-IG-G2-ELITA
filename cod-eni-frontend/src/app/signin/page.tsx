@@ -1,8 +1,8 @@
 import React from 'react';
 import LoginForm from "@/app/login/_components/login_form";
-import ButtonProviders from "@/components/button_list_provider";
 import RegisterForm from "@/app/signin/_components/register_form";
 import Link from "next/link";
+import ButtonProviders from "@/components/ui/button_list_provider";
 
 const Page = () => {
     return (

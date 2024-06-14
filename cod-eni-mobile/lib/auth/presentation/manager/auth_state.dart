@@ -1,28 +1,28 @@
-part of 'example_bloc.dart';
+part of 'auth_bloc.dart';
 
-abstract class ExampleState extends Equatable {
-  const ExampleState();
+abstract class AuthState extends Equatable {
+  const AuthState();
 }
 
-class Empty extends  ExampleState{
+class Empty extends AuthState {
   @override
   List<Object> get props => [];
 }
 
-class Loaded extends ExampleState{
+class Loaded extends AuthState{
   @override
   List<Object?> get props => [];
 
 }
 
 
-class Loading extends ExampleState{
+class Loading extends AuthState{
   @override
   List<Object?> get props => [];
 }
 
 
-class ErrorState extends ExampleState{
+class ErrorState extends AuthState{
   final String message;
   const ErrorState({required this.message});
   @override
