@@ -42,6 +42,7 @@ dependencies:
   shared_preferences:
   equatable:
   flutter_switch: ^0.3.2
+  local_auth:
 
 
   # The following adds the Cupertino Icons font to your application.

@@ -7,9 +7,6 @@ import {LoginSchemaType,  SignUpSchemaType} from "@/app/login/_services/definiti
 import {Button} from "@/components/ui/button";
 import Link from "next/link";
 
-
-
-
 const LoginForm = () => {
     const form = useForm<LoginSchemaType>(
         {
@@ -42,14 +39,14 @@ const LoginForm = () => {
     return (
         <form className="flex flex-col space-y-3" onSubmit={form.handleSubmit(onSubmit)}>
             <div className="flex flex-col space-y-2">
-                <label>Email</label>
+                <label>Identifiant unique</label>
                 <input
                     {...form.register('email')}
                     type="email" className="outline-none p-2 border" placeholder="exemple@gmail.com"
                 />
             </div>
             <div className="flex flex-col space-y-2">
-                <label>Password</label>
+                <label>Nom et prénnom</label>
                 <input
                     {...form.register('password')}
                     type="password" className="outline-none p-2 border"
