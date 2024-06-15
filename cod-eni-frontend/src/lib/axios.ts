@@ -3,7 +3,7 @@ import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 class HttpClient {
     private client(): AxiosInstance {
         const axiosConfig: AxiosRequestConfig = {
-            baseURL: "http://localhost:8888/api"
+            baseURL: "http://192.168.14.90:8000"
         }
         let axiosInstance = axios.create(axiosConfig);
         const getAccessToken = () => {
