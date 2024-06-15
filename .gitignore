@@ -51,6 +51,11 @@ cod-eni-frontend/node_modules
 cod-eni-frontend/pnp
 cod-eni-frontend/pnp.js
 cod-eni-frontend/yarn/install-state.gz
+nestjs-template/node_moules
+*.env
+
+cityzen-connect-sse/node_modules
+
 
 # testing
 cod-eni-frontend/coverage
