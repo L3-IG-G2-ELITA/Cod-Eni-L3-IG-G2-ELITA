@@ -24,11 +24,13 @@ const Step1Form = () => {
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
-                <label htmlFor="name">Name</label>
-                <input id="name" {...register('name', { required: true })} />
-                {errors.name && <span>Name is required</span>}
+                <div className="flex flex-col ">
+                    <label htmlFor="name">Name</label>
+                    <input id="name" className="border border-[#5541D9] rounded-xl p-3" {...register('name', { required: true })} />
+                    {errors.name && <span>Name is required</span>}
+                </div>
             </div>
-            <button type="submit">Next</button>
+            <button type="submit" className="bg-[#072BF2] text-white ">Next</button>
         </form>
     );
 };
