@@ -24,15 +24,15 @@ const Step4Form = () => {
     const router = useRouter();
 
     const onSubmit = (data: Step4FormData) => {
-        setValidationStatus('step4', true);
         updateStep4({
             fatherName: data.fatherName,
             motherName: data.motherName,
             parentsContactNumber:data.parentsContactNumber
 
         })
-        console.log(step1,step2,step3,step4)
+        setValidationStatus('step4', true);
         nextStep();
+        console.log(step1,step2,step3,step4)
     };
 
     const goBack = () => {
