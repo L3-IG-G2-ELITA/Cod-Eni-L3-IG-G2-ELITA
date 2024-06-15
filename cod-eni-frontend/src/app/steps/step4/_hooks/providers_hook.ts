@@ -1,17 +1,17 @@
 import {useMutation, useQuery, useQueryClient} from "react-query";
 
 import {exampleService} from "@/app/feat-exemple/_services/exemple_service";
-import {IExampleDto} from "@/app/steps/step4/_services/definition";
+import {IData, IExampleDto} from "@/app/steps/step4/_services/definition";
 import {providersService} from "@/app/steps/step4/_services/providers_service";
 
 
 
-export  const useCreateExample= ()=>{
+export  const useCreateIdentity= ()=>{
     const queryClient = useQueryClient()
     return useMutation(
         {
             mutationKey:['providers'],
-            mutationFn: (create:FormData)=> providersService.createIdentity(create),
+            mutationFn: (create:IData)=> providersService.createIdentity(create),
             onSuccess: async ()=>{
                 await queryClient.resetQueries(['example'])
                 await queryClient.invalidateQueries(['example'])

@@ -1,9 +1,11 @@
 "use client"
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useRouter } from "next/navigation";
 import useFormStore, {useStepStore} from "@/state/step_form_state";
 import { useForm } from "react-hook-form";
+import {useCreateIdentity} from "@/app/steps/step4/_hooks/providers_hook";
+import {IData} from "@/app/steps/step4/_services/definition";
 
 interface Step4FormData {
     motherName: string;
@@ -18,6 +20,7 @@ const Step4Form = () => {
     const step2= useStepStore.use.step2()
     const step3 =useStepStore.use.step3()
     const  step4 = useStepStore.use.step4()
+    const {mutate,data:sdata,isLoading,isSuccess}= useCreateIdentity()
     const setValidationStatus = useFormStore((state) => state.setValidationStatus);
     const nextStep = useFormStore((state) => state.nextStep);
     const prevStep = useFormStore((state) => state.prevStep);
@@ -30,10 +33,46 @@ const Step4Form = () => {
             parentsContactNumber:data.parentsContactNumber
 
         })
+        const formData:IData = {
+            fullName: step1.name,
+            birthDate: step1.birth,
+            birthPlace: step1.lieu,
+            gender: "Male", // Assuming this is constant
+            nationality: "Malagasy", // Assuming this is constant
+            address: "Tanambao 1345", // Example address
+            phoneNumber: step1.phone,
+            email: step1.email,
+            parentNames:step4.fatherName,
+            residenceProof: "Document d'identite",
+            photo: "my photo",
+            state: "pending",
+            uniqueId: null,
+            identityDocument:"identityDocument"
+        };
+        // const formData = new FormData()
+        // formData.append("fullName",step1.name)
+        // formData.append("birthDate",step1.birth.toString())
+        // formData.append("birthPlace",step1.lieu)
+        // formData.append("gender","Male")
+        // formData.append("nationality","Malagasy")
+        // formData.append("address","Tanambao 1345")
+        // formData.append("phoneNumber",step1.phone)
+        // formData.append("email",step1.email)
+        // formData.append("residenceProof","Docment d'identite")
+        // formData.append("photo","my photo")
+        // formData.append("state","pending")
+        // formData.append("uniqueId","null")
+        console.log(formData)
+        mutate(formData)
         setValidationStatus('step4', true);
         nextStep();
-        console.log(step1,step2,step3,step4)
     };
+
+    useEffect(() => {
+        if(isSuccess){
+            console.log(sdata)
+        }
+    }, [isLoading]);
 
     const goBack = () => {
         prevStep();

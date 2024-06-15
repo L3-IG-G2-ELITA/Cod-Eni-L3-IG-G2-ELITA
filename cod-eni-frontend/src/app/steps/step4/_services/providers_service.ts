@@ -1,11 +1,11 @@
 import {httpClient} from "@/lib/axios";
+import {IData, IExampleDto} from "@/app/steps/step4/_services/definition";
 import {EXAMPLE_ENDPOINTS} from "@/app/feat-exemple/_services/endpoint";
-import {IExampleDto} from "@/app/steps/step4/_services/definition";
 import {PROVIDERS_ENDPOINTS} from "@/app/steps/step4/_services/endpoint";
 
 
 class ProvidersService{
-    public createIdentity(create: FormData){
+    public createIdentity(create: IData){
         return httpClient.post(PROVIDERS_ENDPOINTS.CREATE,create)
     }
     public getExampleByExampleId(exampleId: string){
