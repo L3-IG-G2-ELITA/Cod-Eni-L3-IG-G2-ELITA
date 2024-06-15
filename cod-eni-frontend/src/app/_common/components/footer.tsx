@@ -32,9 +32,7 @@ const Footer = () => {
               <h2 className="font-bold">Cityzen Connect</h2>
             </div>
             <div className="flex flex-col space-y-3">
-              <Link href={""} className="font-bold text-[17px]">
-                A propos de nous
-              </Link>
+              <h5 className="font-bold text-[17px]">A propos de nous</h5>
               <Link href={""} className="hover:underline">
                 Contact
               </Link>
@@ -46,9 +44,9 @@ const Footer = () => {
               </Link>
             </div>
             <div className="flex flex-col space-y-3">
-              <Link href={""} className="font-bold text-[17px]">
+              <h5 className="font-bold text-[17px]">
                 Condition d&apos;utilisation
-              </Link>
+              </h5>
               <Link href={""} className="hover:underline">
                 Support
               </Link>
