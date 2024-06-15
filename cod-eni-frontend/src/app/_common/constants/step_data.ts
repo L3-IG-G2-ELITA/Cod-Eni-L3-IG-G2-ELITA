@@ -6,12 +6,12 @@ export const step_link = [
     },
     {
         rank:2,
-        label:"Informations de Contact",
+        label:"Piece de verification",
         href:"/step3"
     },
     {
         rank:3,
-        label:"Identifiants Officiels",
+        label:"Informations sur l'État Civil",
         href:"/step4"
     },
     {

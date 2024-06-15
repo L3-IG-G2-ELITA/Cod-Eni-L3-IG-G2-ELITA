@@ -5,7 +5,7 @@ import {step_link} from "@/app/_common/constants/step_data";
 const SideIndicator = () => {
 
     return (
-        <div className="flex flex-col space-y-3 justify-center h-screen px-10">
+        <div className="flex w-[30%] flex-col space-y-3 justify-center h-screen px-10">
             {
                 step_link.map((elem,key)=>(
 
