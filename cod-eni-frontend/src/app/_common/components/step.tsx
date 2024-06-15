@@ -13,7 +13,7 @@ const Step = () => {
                     Simplifiez vos démarches administratives en quatre étapes faciles avec CitizenConnect
                 </p>
             </div>
-            <div className="flex flex-col  space-y-10">
+            <div className="flex flex-col  space-y-12">
                 {
                     steps.map((elem,key)=>(
                         <StepCard item={elem} rank={key + 1} key={key}/>

@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex flex-col space-y-4">
           <div className="flex w-full justify-around pt-20">
             <div className="text-white flex items-start space-x-3">
-              <div className="items-center">
+              <div className="flex items-center space-x-3">
                 <svg
                   id="logo-82"
                   width="40"
@@ -28,18 +28,27 @@ const Footer = () => {
                     fill="currentColor"
                   ></path>
                 </svg>
+                <h2 className="font-bold">CityzenConnect</h2>
               </div>
-              <h2 className="font-bold">Cityzen Connect</h2>
             </div>
             <div className="flex flex-col space-y-3">
               <h5 className="font-bold text-[17px]">A propos de nous</h5>
-              <Link href={""} className="hover:underline">
+              <Link
+                href={""}
+                className="hover:underline transition duration-300"
+              >
                 Contact
               </Link>
-              <Link href={""} className="hover:underline">
+              <Link
+                href={""}
+                className="hover:underline transition duration-300"
+              >
                 FAQ
               </Link>
-              <Link href={""} className="hover:underline">
+              <Link
+                href={""}
+                className="hover:underline transition duration-300"
+              >
                 Mentions legales
               </Link>
             </div>
@@ -47,13 +56,22 @@ const Footer = () => {
               <h5 className="font-bold text-[17px]">
                 Condition d&apos;utilisation
               </h5>
-              <Link href={""} className="hover:underline">
+              <Link
+                href={""}
+                className="hover:underline transition duration-300"
+              >
                 Support
               </Link>
-              <Link href={""} className="hover:underline">
+              <Link
+                href={""}
+                className="hover:underline transition duration-300"
+              >
                 Blog
               </Link>
-              <Link href={""} className="hover:underline">
+              <Link
+                href={""}
+                className="hover:underline transition duration-300"
+              >
                 Mentions legales
               </Link>
             </div>
@@ -67,13 +85,13 @@ const Footer = () => {
           </p>
           <div className="flex items-center space-x-8">
             <Link href={""}>
-              <CiLinkedin className="text-2xl" />
+              <CiLinkedin className="text-[30px] hover:text-[#072BF2] transition duration-300" />
             </Link>
             <Link href={""}>
-              <FaFacebook className="text-2xl" />
+              <FaFacebook className="text-[26px] hover:text-[#072BF2] transition duration-300" />
             </Link>
             <Link href={""}>
-              <CiInstagram className="text-2xl" />
+              <CiInstagram className="text-[30px] hover:text-[#072BF2] transition duration-300" />
             </Link>
           </div>
         </div>

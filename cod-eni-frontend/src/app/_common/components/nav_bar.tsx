@@ -25,7 +25,7 @@ const NavBar = () => {
           ></path>
         </svg>
         <div>
-          <h2 className="font-bold text-black">Cityzen Connect</h2>
+          <h2 className="font-bold text-black text-[24px]">CityzenConnect</h2>
         </div>
       </div>
       <div className="flex space-x-9 font-semibold">
