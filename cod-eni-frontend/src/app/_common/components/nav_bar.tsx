@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-
+import { usePathname } from "next/navigation";
 const NavBar = () => {
+  const pathname = usePathname();
   return (
     <div className="flex fixed w-full top-0 justify-between px-[8%] backdrop-filter backdrop-blur-lg bg-opacity-30  py-4 items-center ">
       <div className="flex items-center  space-x-3 text-[#072BF2]">
@@ -26,14 +28,42 @@ const NavBar = () => {
           <h2 className="font-bold text-black">Cityzen Connect</h2>
         </div>
       </div>
-      <div className="flex space-x-7 font-semibold">
-        <Link href={""}>Acceuil</Link>
-        <Link href={""}>A propos</Link>
-        <Link href={""}>Service</Link>
-        <Link href={""}>Contacts</Link>
+      <div className="flex space-x-9 font-semibold">
+        <Link
+          href={""}
+          className={`link ${
+            pathname === "/" ? "font-bold text-[#072BF2]" : ""
+          }`}
+        >
+          Acceuil
+        </Link>
+        <Link
+          href={""}
+          className={`link ${
+            pathname === "" ? "font-bold text-[#072BF2]" : ""
+          }`}
+        >
+          A propos
+        </Link>
+        <Link
+          href={""}
+          className={`link ${
+            pathname === "" ? "font-bold text-[#072BF2]" : ""
+          }`}
+        >
+          Service
+        </Link>
+        <Link
+          href={""}
+          className={`link ${
+            pathname === "" ? "font-bold text-[#072BF2]" : ""
+          }`}
+        >
+          Contacts
+        </Link>
       </div>
-      <button className="px-6 py-3 border border-[#1E1E1E] hover:border-[#1E1E1E] bg-transparent rounded-full">
-        Inscriver gratuitement
+      <button className="px-6 py-3 border border-[#1E1E1E] bg-transparent rounded-full hover:bg-[#4836BF] hover:text-white transition duration-300">
+        Inscrivez-vous gratuitement
       </button>
     </div>
   );
