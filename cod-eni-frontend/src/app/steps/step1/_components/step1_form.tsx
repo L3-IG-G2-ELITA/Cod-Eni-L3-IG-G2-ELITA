@@ -61,24 +61,24 @@ const Step1Form = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="w-full px-[10%] flex flex-col space-y-6">
+        <form onSubmit={handleSubmit(onSubmit)} className="w-full  flex flex-col space-y-6">
             <div className="flex justify-between w-full ">
-                <div className="w-[48%]">
+                <div className="w-[46%]">
                     <div className="flex flex-col space-y-2">
                         <label htmlFor="name">Nom et prénom </label>
-                        <input id="name" className="border outline-none border-[#5541D9] rounded-xl p-3" placeholder="Votre nom et prénom" {...register('name', { required: true })} />
+                        <input id="name" className="border outline-none border-[#5541D9] rounded-xl p-2" placeholder="Votre nom et prénom" {...register('name', { required: true })} />
                         {errors.name && <span>Name is required</span>}
                     </div>
                 </div>
-                <div className="w-[48%]">
+                <div className="w-[46%]">
                     <div className="flex flex-col space-y-2">
                         <label htmlFor="email">Email </label>
-                        <input id="email" className="border outline-none border-[#5541D9] rounded-xl p-3" {...register('email', { required: true })} />
+                        <input id="email" className="border outline-none border-[#5541D9] rounded-xl p-2" placeholder="Votre email" {...register('email', { required: true })} />
                         {errors.email && <span>Email is required</span>}
                     </div>
                 </div>
             </div>
-            <div className="flex justify-between w-full ">
+            <div className="flex justify-between w-full space-x-10 ">
                 <div>
                     <div className="flex flex-col space-y-2">
                         <label htmlFor="birthdate">Date de naissance </label>
@@ -87,7 +87,7 @@ const Step1Form = () => {
                                 <Button
                                     variant={"outline"}
                                     className={cn(
-                                        "w-[328px] h-[55px] rounded-xl justify-start text-left font-normal border border-[#5541D9]",
+                                        "w-[217px] h-[45px] rounded-xl justify-start text-left font-normal border border-[#5541D9]",
                                         !date && "text-muted-foreground"
                                     )}
                                 >
@@ -104,14 +104,14 @@ const Step1Form = () => {
                                 />
                             </PopoverContent>
                         </Popover>
-                        {!date && <span>Date is required</span>}
+                        {/*{!date && <span>Date is required</span>}*/}
                     </div>
                 </div>
                 <div>
                     <div className="flex flex-col space-y-2">
                         <label htmlFor="birthplace">Lieu de naissance </label>
                         <Select onValueChange={(value) => setBirthplace(value)}>
-                            <SelectTrigger className="w-[328px] h-[55px] border border-[#5541D9] rounded-xl p-3">
+                            <SelectTrigger className="w-[217px] h-[45px] border border-[#5541D9] rounded-xl p-3">
                                 <SelectValue placeholder="Choisissez le lieu" />
                             </SelectTrigger>
                             <SelectContent className="z-50 ">
@@ -125,21 +125,21 @@ const Step1Form = () => {
                                 </SelectGroup>
                             </SelectContent>
                         </Select>
-                        {!birthplace && <span>Lieu de naissance is required</span>}
+                        {/*{!birthplace && <span>Lieu de naissance is required</span>}*/}
                     </div>
                 </div>
             </div>
             <div>
                 <div className="flex flex-col space-y-2 ">
                     <label htmlFor="cin">CIN </label>
-                    <input id="cin" className="border outline-none border-[#5541D9] rounded-xl p-3" {...register('cin', { required: true })} />
+                    <input placeholder="Votre cin" id="cin" className="border outline-none border-[#5541D9] rounded-xl p-3" {...register('cin', { required: true })} />
                     {errors.cin && <span>CIN is required</span>}
                 </div>
             </div>
             <div>
                 <div className="flex flex-col space-y-2 ">
-                    <label htmlFor="phone">Phone number </label>
-                    <input id="phone" className="border outline-none border-[#5541D9] rounded-xl p-3" {...register('phone', { required: true })} />
+                    <label htmlFor="phone">Telephone </label>
+                    <input id="phone" placeholder="Votre numero telephone" className="border outline-none border-[#5541D9] rounded-xl p-3" {...register('phone', { required: true })} />
                     {errors.phone && <span>Phone number is required</span>}
                 </div>
             </div>

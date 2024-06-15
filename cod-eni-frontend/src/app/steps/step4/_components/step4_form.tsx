@@ -84,21 +84,21 @@ const Step4Form = () => {
             <div>
                 <div className="flex flex-col space-y-2">
                     <label htmlFor="motherName">Nom de la Mère</label>
-                    <input id="motherName" className="border outline-none border-[#5541D9] rounded-xl p-3" {...register('motherName', { required: true })} />
+                    <input id="motherName" placeholder="Nom de votre mère " className="border outline-none border-[#5541D9] rounded-xl p-3" {...register('motherName', { required: true })} />
                     {errors.motherName && <span>Le nom de la mère est requis</span>}
                 </div>
             </div>
             <div>
                 <div className="flex flex-col space-y-2">
                     <label htmlFor="fatherName">Nom du Père</label>
-                    <input id="fatherName" className="border outline-none border-[#5541D9] rounded-xl p-3" {...register('fatherName', { required: true })} />
+                    <input id="fatherName" placeholder="Nom de votre père " className="border outline-none border-[#5541D9] rounded-xl p-3" {...register('fatherName', { required: true })} />
                     {errors.fatherName && <span>Le nom du père est requis</span>}
                 </div>
             </div>
             <div>
                 <div className="flex flex-col space-y-2">
-                    <label htmlFor="parentsContactNumber">Numéro de Contact des Parents</label>
-                    <input id="parentsContactNumber" className="border outline-none border-[#5541D9] rounded-xl p-3" {...register('parentsContactNumber', { required: true })} />
+                    <label htmlFor="parentsContactNumber">Contact</label>
+                    <input id="parentsContactNumber" placeholder="Numéro de contact des parents " className="border outline-none border-[#5541D9] rounded-xl p-3" {...register('parentsContactNumber', { required: true })} />
                     {errors.parentsContactNumber && <span>Le numéro de contact des parents est requis</span>}
                 </div>
             </div>
